@@ -26,7 +26,4 @@ class User : Serializable {
 
     @Column
     var updatedAt: LocalDateTime? = null
-
-    @OneToOne(mappedBy = "user", fetch = FetchType.LAZY)
-    var board: Board? = null
 }

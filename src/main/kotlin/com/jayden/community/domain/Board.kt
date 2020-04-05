@@ -27,7 +27,7 @@ class Board : Serializable {
     var boardType: BoardType? = null
 
     @Column
-    var createdAt: LocalDateTime? = null
+    var createdAt: LocalDateTime = LocalDateTime.now()
 
     @Column
     var updatedAt: LocalDateTime? = null
