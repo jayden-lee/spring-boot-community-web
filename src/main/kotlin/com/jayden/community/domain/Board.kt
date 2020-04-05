@@ -32,11 +32,7 @@ class Board : Serializable {
     @Column
     var updatedAt: LocalDateTime? = null
 
-    @OneToOne(fetch = FetchType.LAZY, cascade = [CascadeType.ALL])
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     var user: User? = null
-        set(value) {
-            field = value
-            field?.board = this
-        }
 }

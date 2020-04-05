@@ -38,6 +38,7 @@ internal class JpaMappingTests {
             this.createdAt = LocalDateTime.now()
             this.updatedAt = LocalDateTime.now()
         }
+        userRepository.save(user)
 
         var board = Board().apply {
             this.title = BOARD_TEST_TITLE
@@ -48,7 +49,6 @@ internal class JpaMappingTests {
             this.updatedAt = LocalDateTime.now()
             this.user = user
         }
-
         boardRepository.save(board)
     }
 
