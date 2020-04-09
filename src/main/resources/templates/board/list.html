@@ -32,7 +32,7 @@
             <tr th:each="board : ${boardList}">
                 <td th:text="${board.id}"></td>
                 <td th:text="${board.boardType.value}"></td>
-                <td><a th:href="'/board?idx='+${board.id}" th:text="${board.title}"></a></td>
+                <td><a th:href="'/board?id='+${board.id}" th:text="${board.title}"></a></td>
                 <td th:text="${board.createdAt} ? ${#temporals.format(board.createdAt,'yyyy-MM-dd HH:mm')} : ${board.createdAt}"></td>
                 <td th:text="${board.updatedAt} ? ${#temporals.format(board.updatedAt,'yyyy-MM-dd HH:mm')} : ${board.updatedAt}"></td>
             </tr>
