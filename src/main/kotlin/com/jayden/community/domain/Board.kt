@@ -34,4 +34,12 @@ class Board : Serializable {
 
     @OneToOne
     var user: User? = null
+
+    fun update(board: Board) {
+        this.title = board.title
+        this.subTitle = board.subTitle
+        this.content = board.content
+        this.boardType = board.boardType
+        this.updatedAt = LocalDateTime.now()
+    }
 }
